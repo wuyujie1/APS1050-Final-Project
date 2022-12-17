@@ -54,23 +54,50 @@
       <fieldset>
 
     <div>
-      <input type="checkbox" id="French" name="French Bulldog">
+      <input type="checkbox" id="French Bulldog" name="French Bulldog" checked onchange="App.handleBreedCheckbox(this.id)">
       <label for="French Bulldog">French Bulldog</label>
     </div>
 
     <div>
-        <input type="checkbox" id="Golden" name="Golden Retriever">
+        <input type="checkbox" id="Golden Retriever" name="Golden Retriever" checked onchange="App.handleBreedCheckbox(this.id)">
         <label for="Golden Retriever">Golden Retriever</label>
       </div>
 
     <div>
-        <input type="checkbox" id="Boxer" name="Boxer">
+        <input type="checkbox" id="Boxer" name="Boxer" checked onchange="App.handleBreedCheckbox(this.id)">
         <label for="Boxer">Boxer</label>
     </div>
 
     <div>
-        <input type="checkbox" id="Scottish" name="Scottish Terrier">
+        <input type="checkbox" id="Scottish Terrier" name="Scottish Terrier" checked onchange="App.handleBreedCheckbox(this.id)">
         <label for="Scottish Terrier">Scottish Terrier</label>
+    </div>
+</fieldset>
+<fieldset>
+
+    <div>
+      <input type="checkbox" id="Lisco, Alabama" name="Lisco, Alabama" checked onchange="App.handleLocationCheckbox(this.id)">
+      <label for="Lisco, Alabama">Lisco, Alabama</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Freeburn, Idaho" name="Freeburn, Idaho" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Freeburn, Idaho">Freeburn, Idaho</label>
+      </div>
+
+    <div>
+        <input type="checkbox" id="Innsbrook, Illinois" name="Innsbrook, Illinois" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Innsbrook, Illinois">Innsbrook, Illinois</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Windsor, Montana" name="Windsor, Montana" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Windsor, Montana">Windsor, Montana</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Dawn, Wisconsin" name="Dawn, Wisconsin" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Dawn, Wisconsin">Dawn, Wisconsin</label>
     </div>
 
 </fieldset>
