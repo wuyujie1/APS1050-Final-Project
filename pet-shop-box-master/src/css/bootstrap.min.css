@@ -95,6 +95,8 @@ header {
 
 fieldset div {
   display: inline-block;
-  width: 30%;
+  width: 15%;
+  margin:10px;
+  text-align: center;
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
