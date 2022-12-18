@@ -196,7 +196,7 @@ web3 = new Web3(App.web3Provider);
         // Execute adopt as a transaction by sending account
         return adoptionInstance.adopt(petId, {from: account});
       }).then(function(result) {
-
+        console.log(result);
         return App.markAdopted();
       }).catch(function(err) {
         console.log(err.message);
