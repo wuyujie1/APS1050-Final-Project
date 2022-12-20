@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pet Shop V2.0</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Pet Shop V2.0</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+    </header>
+    <body>
+      <nav>
+        <ul>
+          <li><a class="nav-link active" href="index.html"<a>Active listings</a></li>
+          <li><a class="nav-link" href="archives.html">Archives</a></li>
+          <li><a class="nav-link" href="service.html">Shop's side services</a></li>
+        </ul>
+      </nav>
+
+
+        <div class="slidecontainer">
+          <div class="slidercaption">AGE:</div>
+          <input type="range" min="0" max="5" value="0" class="slider" id="ageSlider" onchange="App.handleSlider(this.value)">
+        </div>
+
+
+
+      <fieldset>
+
+    <div>
+      <input type="checkbox" id="French Bulldog" name="French Bulldog" checked onchange="App.handleBreedCheckbox(this.id)">
+      <label for="French Bulldog">French Bulldog</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Golden Retriever" name="Golden Retriever" checked onchange="App.handleBreedCheckbox(this.id)">
+        <label for="Golden Retriever">Golden Retriever</label>
+      </div>
+
+    <div>
+        <input type="checkbox" id="Boxer" name="Boxer" checked onchange="App.handleBreedCheckbox(this.id)">
+        <label for="Boxer">Boxer</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Scottish Terrier" name="Scottish Terrier" checked onchange="App.handleBreedCheckbox(this.id)">
+        <label for="Scottish Terrier">Scottish Terrier</label>
+    </div>
+</fieldset>
+<fieldset>
+
+    <div>
+      <input type="checkbox" id="Lisco, Alabama" name="Lisco, Alabama" checked onchange="App.handleLocationCheckbox(this.id)">
+      <label for="Lisco, Alabama">Lisco, Alabama</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Freeburn, Idaho" name="Freeburn, Idaho" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Freeburn, Idaho">Freeburn, Idaho</label>
+      </div>
+
+    <div>
+        <input type="checkbox" id="Innsbrook, Illinois" name="Innsbrook, Illinois" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Innsbrook, Illinois">Innsbrook, Illinois</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Windsor, Montana" name="Windsor, Montana" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Windsor, Montana">Windsor, Montana</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="Dawn, Wisconsin" name="Dawn, Wisconsin" checked onchange="App.handleLocationCheckbox(this.id)">
+        <label for="Dawn, Wisconsin">Dawn, Wisconsin</label>
+    </div>
+
+</fieldset>
+
+
+      <div id="petsRow" class="row">
+        <!-- PETS LOAD HERE -->
+      </div>
+    </div>
+
+    <div id="petTemplate" style="display: none;">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div id="outer" class="panel panel-default panel-pet">
+          <div class="panel-heading">
+            <h3 class="panel-title">Scrappy</h3>
+          </div>
+          <div class="panel-body">
+            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;" src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
+            <br/><br/>
+            <strong>Breed</strong>: <span class="pet-breed">Golden Retriever</span><br/>
+            <strong>Age</strong>: <span class="pet-age">3</span><br/>
+            <strong>Location</strong>: <span class="pet-location">Warren, MI</span><br/><br/>
+            <button class="btn btn-default btn-adopt" type="button" data-id="0">Adopt : )</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
