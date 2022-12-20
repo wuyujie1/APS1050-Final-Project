@@ -18,6 +18,42 @@
     <![endif]-->
   </head>
 
+  <style>
+  /* The alert message box */
+
+
+  .slogan {
+      padding: 10px;
+      background-color: pink;
+      color: PaleVioletRed;
+      margin-bottom: 5px;
+      text-align: left;
+      font-size: 19px;
+      float:left;
+      width: 90%;
+      height:60px;
+
+  }
+  .donate {
+      padding: 10px;
+      background-color: pink;
+      text-align:right;
+
+      float:left;
+      width:10%;
+      height:60px;
+
+  }
+  .basicInfo {
+      color: white;
+      background-color:#363636;
+      text-align:right;
+}
+
+
+
+  </style>
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -25,17 +61,45 @@
   <script src="js/web3.min.js"></script>
   <script src="js/truffle-contract.js"></script>
   <script src="js/app.js"></script>
+
+
+
   <header>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
           <h1 class="text-center">Pet Shop V2.0</h1>
           <hr/>
-          <br/>
+
         </div>
+
       </div>
     </header>
     <body>
+
+
+        <div class="basicInfo">
+            <div class="currBalance"> Current donation balance: 0 ETH </div>
+          </br>
+        </div>
+
+
+      <div class="slogan">
+
+        <div>Every pet deserves a loving home. Thank you for your love and support.
+           Please consider donating to help more pets find their forever families.&#128151;
+         </div>
+
+
+      </div>
+       <div class="donate">
+          <button class="btn btn-link btn-donate" type="button" style ="color:white;font-size:15px;border: 2px solid white"><b>Donate 1 &#127830</b></button>
+      </div>
+
+
+
+
+
       <nav>
         <ul>
           <li><a class="nav-link active" href="index.html"<a>Active listings</a></li>
