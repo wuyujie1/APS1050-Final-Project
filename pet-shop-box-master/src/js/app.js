@@ -66,9 +66,12 @@ web3 = new Web3(App.web3Provider);
 
   bindEvents: function() {
     $(document).on('click', '.btn-adopt', App.handleAdopt);
+    $(document).on('click', '.btn-donate', App.handleDonate);
+
   },
 
-
+//Yujie's code
+//start
   handleSlider: function(value) {
     if (value != "0"){
       for (i = 0; i < 16; i++) {
@@ -155,7 +158,56 @@ web3 = new Web3(App.web3Provider);
 
         App.markAdopted();
       },
+//end of Yujie's code
 
+
+
+
+//Jiyi's code
+//start
+
+  // fuction to get balance of contract （total amount of donation) after each donation (this function will be called in handleDonate )
+  refreshBalance: function(){
+      // address of contract(need to be changed after new deployment)
+      var address = '015f781d236e6746166242c5f795b547537f5474'
+      web3.eth.getBalance(address, function(error, balance) {
+          if (error) {
+            console.log(error);
+          }
+          var curr = web3.fromWei(balance.toNumber(), 'Ether')
+
+          $('.currBalance').text("Current donation balance: "+ curr + ' ETH' )
+        });
+
+      },
+  // fuction to make a donation (will be triggered when user click on button click)
+  //called in   bindEvents: function()
+  handleDonate: function(event) {
+        event.preventDefault();
+
+        var donateInstance;
+
+        web3.eth.getAccounts(function(error, accounts) {
+          if (error) {
+            console.log(error);
+          }
+
+          var account = accounts[0];
+
+          App.contracts.Adoption.deployed().then(function(instance) {
+            donateInstance = instance;
+
+            // Execute adopt as a transaction by sending account
+            return donateInstance.donate({from: account, value: web3.toWei('1', 'ether')});
+          }).then(function(result) {
+            console.log(result);
+            return App.refreshBalance();
+          }).catch(function(err) {
+            console.log(err.message);
+          });
+        });
+      },
+  //end  of Jiyi's code
 
   markAdopted: function(adopters, account) {
     var adoptionInstance;
